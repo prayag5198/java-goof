@@ -14,13 +14,13 @@ pipeline {
       }
     }
    
-    stage ('Check-Git-secrets') {
+    /*stage ('Check-Git-secrets') {
       steps {
         sh 'rm trufflehog || true'
         sh 'docker run gesellix/trufflehog --json https://github.com/prayag5198/java-goof.git > trufflehog'
         sh 'cat trufflehog'
       }
-    }
+    }*/
     
    
     
