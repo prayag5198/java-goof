@@ -27,9 +27,9 @@ pipeline {
     stage ('SAST') {
       steps {
         //withSonarQubeEnv('sonar') {
-          //sh 'mvn sonar:sonar'
-         // sh 'cat target/sonar/report-task.txt'
-       sh 'mvn sonar:sonar -Dsonar.projectKey=vulnerable -Dsonar.host.url=http://localhost:9000 -Dsonar.login=3fa37d050a28974d7c366ad918bbdeab997bb040'
+          sh 'mvn sonar:sonar'
+          sh 'cat target/sonar/report-task.txt'
+      // sh 'mvn sonar:sonar -Dsonar.projectKey=vulnerable -Dsonar.host.url=http://localhost:9000 -Dsonar.login=3fa37d050a28974d7c366ad918bbdeab997bb040'
         //}
       }
     }
